@@ -18,6 +18,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 require('./models/User');
+require('./config/passport'); // <-- ADD THIS LINE
+const passport = require('passport'); // <-- ADD THIS LINE
 
 const usersRouter = require('./routes/api/users');
 
